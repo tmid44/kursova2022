@@ -48,7 +48,7 @@
                                             <td>{{$crypto->amount}}</td>
                                             <td>{{$crypto->buy_price}}</td>
                                             <td>{{$crypto->crypto->current_price}}</td>
-                                            <td><a href="{{route('admin.crypto.edit', $crypto->id)}}"
+                                            <td><a href="{{route('personal.portfolio.edit', $crypto->id)}}"
                                                    class="text-success"><i class="fas fa-pen"></i> </a></td>
                                             <td>
                                                 <form action="{{route('admin.crypto.delete', $crypto->id)}}"

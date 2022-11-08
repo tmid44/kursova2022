@@ -38,7 +38,7 @@ class UpdateRequest extends FormRequest
             'title.string'=>'Це поле повенне бути текстове',
             'tag.required'=>'Це поле потрібно заповнити',
             'tag.string'=>'Це поле повенне бути текстове',
-            'current_price.double'=>'Це поле повенне бути числового формату',
+            'current_price.numeric'=>'Це поле повенне бути числового формату',
             'logo.file'=>'Необхідно обрати файл',
         ];
     }

@@ -24,22 +24,21 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required | string',
-            'tag' => 'required | string',
-            'current_price' => 'nullable | numeric',
-            'logo' => 'nullable | file',
+            'crypto_id' => 'required | integer',
+            'buy_price' => 'required | numeric',
+            'amount' => 'required | numeric',
         ];
     }
 
     public function messages()
     {
         return [
-            'title.required'=>'Це поле потрібно заповнити',
-            'title.string'=>'Це поле повенне бути текстове',
-            'tag.required'=>'Це поле потрібно заповнити',
-            'tag.string'=>'Це поле повенне бути текстове',
-            'current_price.double'=>'Це поле повенне бути числового формату',
-            'logo.file'=>'Необхідно обрати файл',
+            'crypto_id.required'=>'Це поле потрібно заповнити',
+            'buy_price.required'=>'Це поле потрібно заповнити',
+            'amount.required'=>'Це поле потрібно заповнити',
+            'crypto_id.integer'=>'Це поле повенне бути цілочисельним',
+            'buy_price.numeric'=>'Це поле повенне бути числового формату',
+            'amount.numeric'=>'Це поле повенне бути числового формату',
         ];
     }
 }
