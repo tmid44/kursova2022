@@ -90,6 +90,17 @@ Route::group(['namespace' => 'App\Http\Controllers\Personal', 'prefix' => 'perso
     Route::group(['namespace' => 'Main'], function () {
         Route::get('/', 'IndexController')->name('personal.main.index');
     });
+
+    Route::group(['namespace' => 'Portfolio', 'prefix' => 'portfolio'], function () {
+        Route::get('/', 'IndexController')->name('personal.portfolio.index');
+        Route::get('/create', 'CreateController')->name('personal.portfolio.create');
+        Route::post('/', 'StoreController')->name('personal.portfolio.store');
+        Route::get('/{portfolio}', 'ShowController')->name('personal.portfolio.show');
+        Route::get('/{portfolio}/edit', 'EditController')->name('personal.portfolio.edit');
+        Route::patch('/{portfolio}', 'UpdateController')->name('personal.portfolio.update');
+        Route::delete('/{portfolio}', 'DeleteController')->name('personal.portfolio.delete');
+    });
+
     Route::group(['namespace' => 'Liked', 'prefix'=>'liked'], function () {
         Route::get('/', 'IndexController')->name('personal.liked.index');
         Route::delete('/{post}', 'DeleteController')->name('personal.liked.delete');

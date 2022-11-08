@@ -27,6 +27,14 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('personal.portfolio.index')}}" class="nav-link">
+                    <i class="nav-icon fas fa-comment"></i>
+                    <p>
+                        Портфоліо
+                    </p>
+                </a>
+            </li>
 
         </ul>
 

@@ -62,4 +62,8 @@ class User extends Authenticatable
     public function comments(){
         return $this->hasMany(Comment::class,'user_id', 'id');
     }
+
+    public function cryptos(){
+        return $this->belongsToMany(Crypto::class,'crypto_users', 'user_id' ,'crypto_id');
+    }
 }
