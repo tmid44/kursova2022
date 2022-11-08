@@ -12,6 +12,7 @@ class IndexController extends Controller
     public function __invoke()
     {
         $cryptos = auth()->user()->cryptos;
-        return view('personal.portfolio.index', compact('cryptos'));
+        $crypto_infs = auth()->user()->crypto_inf;
+        return view('personal.portfolio.index', compact('cryptos' , 'crypto_infs'));
     }
 }

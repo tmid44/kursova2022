@@ -19,7 +19,7 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-9">
                         <div class="card">
                             <div class="card-body table-responsive p-0">
                                 <table class="table table-hover text-nowrap">
@@ -30,17 +30,19 @@
                                         <th>Тег</th>
                                         <th>Кількість</th>
                                         <th>Ціна закупу</th>
+                                        <th>Поточна ціна</th>
                                         <th colspan="2">Дія</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($cryptos as $crypto)
+                                    @foreach($crypto_infs as $crypto)
                                         <tr>
                                             <td>{{$crypto->id}}</td>
-                                            <td>{{$crypto->title}}</td>
-                                            <td>{{$crypto->tag}}</td>
+                                            <td>{{$crypto->crypto->title}}</td>
+                                            <td>{{$crypto->crypto->tag}}</td>
                                             <td>{{$crypto->amount}}</td>
                                             <td>{{$crypto->buy_price}}</td>
+                                            <td>{{$crypto->crypto->current_price}}</td>
                                             <td><a href="{{route('admin.crypto.edit', $crypto->id)}}"
                                                    class="text-success"><i class="fas fa-pen"></i> </a></td>
                                             <td>

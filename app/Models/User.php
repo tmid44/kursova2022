@@ -66,4 +66,12 @@ class User extends Authenticatable
     public function cryptos(){
         return $this->belongsToMany(Crypto::class,'crypto_users', 'user_id' ,'crypto_id');
     }
+
+    public function crypto_inf(){
+        return $this->hasMany(CryptoUser::class,'user_id', 'id');
+    }
+
+    /*public function cryptos(){
+        return $this->hasMany(CryptoUser::class,'crypto_users', 'id');
+    }*/
 }

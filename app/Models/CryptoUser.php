@@ -11,4 +11,9 @@ class CryptoUser extends Model
 
     protected $table = 'crypto_users';
     protected $guarded = false;
+
+
+    public function crypto(){
+        return $this->belongsTo(Crypto::class, 'crypto_id', 'id');
+    }
 }
