@@ -12,6 +12,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{route('personal.portfolio.index')}}" class="nav-link">
+                    <i class="nav-icon fas fa-money-bill-wave"></i>
+                    <p>
+                        Портфоліо
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{route('personal.liked.index')}}" class="nav-link">
                     <i class="nav-icon fas fa-heart"></i>
                     <p>
@@ -24,14 +32,6 @@
                     <i class="nav-icon fas fa-comment"></i>
                     <p>
                         Коментарі
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{route('personal.portfolio.index')}}" class="nav-link">
-                    <i class="nav-icon fas fa-comment"></i>
-                    <p>
-                        Портфоліо
                     </p>
                 </a>
             </li>

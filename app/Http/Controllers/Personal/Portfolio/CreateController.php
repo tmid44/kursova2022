@@ -9,6 +9,8 @@ class CreateController extends Controller
 {
     public function __invoke()
     {
-        return view('admin.cryptos.create');
+        $cryptos = auth()->user()->cryptos;
+
+        return view('personal.portfolio.create', compact('cryptos'));
     }
 }

@@ -19,6 +19,11 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
+                    <div class="col-2 mb-3">
+                        <a href="{{route('personal.portfolio.create')}}" class="btn btn-block btn-primary">Доповнити портфоліо</a>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-9">
                         <div class="card">
                             <div class="card-body table-responsive p-0">

@@ -42,6 +42,13 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
+                @if(auth()->user()->role==0)
+                <li class="nav-item pr-4">
+                    <form action="{{ route('admin.main.index') }}" >
+                        <input type="submit" value="Кабінет адміністратора" class="btn btn-outline-dark">
+                    </form>
+                </li>
+                @endif
                 <li class="nav-item">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
