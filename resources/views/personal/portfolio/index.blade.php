@@ -24,30 +24,40 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-11">
                         <div class="card">
                             <div class="card-body table-responsive p-0">
                                 <table class="table table-hover text-nowrap">
                                     <thead>
                                     <tr>
-                                        <th>ID</th>
+{{--                                        <th>ID</th>--}}
                                         <th>Криптовалюта</th>
                                         <th>Тег</th>
                                         <th>Кількість</th>
                                         <th>Ціна закупу</th>
+                                        <th>Куплено за</th>
                                         <th>Поточна ціна</th>
+                                        <th>Поточна вартість</th>
+                                        <th>Прибуток</th>
                                         <th colspan="2">Дія</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($crypto_infs as $cryptoUser)
+                                        {{--@if($cryptoUser->diff_sum > 0)
+                                        @elseif($cryptoUser->diff_sum == 0)
+                                        @else
+                                        @endif--}}
                                         <tr>
-                                            <td>{{$cryptoUser->id}}</td>
+{{--                                            <td>{{$cryptoUser->id}}</td>--}}
                                             <td>{{$cryptoUser->crypto->title}}</td>
                                             <td>{{$cryptoUser->crypto->tag}}</td>
                                             <td>{{$cryptoUser->amount}}</td>
-                                            <td>{{$cryptoUser->buy_price}}</td>
-                                            <td>{{$cryptoUser->crypto->current_price}}</td>
+                                            <td>{{$cryptoUser->buy_price}} $</td>
+                                            <td>{{$cryptoUser->sum}} $</td>
+                                            <td>{{$cryptoUser->crypto->current_price}} $</td>
+                                            <td>{{$cryptoUser->current_sum}} $</td>
+                                            <td class="font-weight-bold text-{{$cryptoUser->diff_sum >= 0 ? "green" : "red"}}">{{$cryptoUser->diff_sum}} $</td>
                                             <td><a href="{{route('personal.portfolio.edit', $cryptoUser->id)}}"
                                                    class="text-success"><i class="fas fa-pen"></i> </a></td>
                                             <td>

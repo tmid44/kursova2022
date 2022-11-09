@@ -27,6 +27,7 @@
                     </p>
                 </a>
             </li>
+            {{--
             <li class="nav-item">
                 <a href="{{route('admin.post.index')}}" class="nav-link">
                     <i class="nav-icon fas fa-book-open"></i>
@@ -35,7 +36,7 @@
                     </p>
                 </a>
             </li>
-
+--}}
         </ul>
 
     </div>

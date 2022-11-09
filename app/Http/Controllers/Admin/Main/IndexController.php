@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Main;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Crypto;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\User;
@@ -18,6 +19,7 @@ class IndexController extends Controller
         $data['postCount']=Post::all()->count();
         $data['categoryCount']=Category::all()->count();
         $data['tagCount']=Tag::all()->count();
+        $data['cryptoCount']=Crypto::all()->count();
         return view('admin.main.index', compact('data'));
     }
 }

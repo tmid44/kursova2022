@@ -19,6 +19,7 @@
                     </p>
                 </a>
             </li>
+            {{--
             <li class="nav-item">
                 <a href="{{route('personal.liked.index')}}" class="nav-link">
                     <i class="nav-icon fas fa-heart"></i>
@@ -34,7 +35,7 @@
                         Коментарі
                     </p>
                 </a>
-            </li>
+            </li>--}}
 
         </ul>
 

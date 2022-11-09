@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        return redirect()->route('post.index');
+        return redirect()->route('personal.main.index');
         /*$posts = Post::paginate(6);
         $randomPosts = Post::get()->random(4);
         $likedPosts = Post::withCount('likedUser')->OrderBy('liked_user_count', 'DESC')->get()->take(3);
