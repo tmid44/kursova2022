@@ -15,6 +15,7 @@ class UpdateController extends Controller
     public function __invoke(UpdateRequest $request, int $cryptoUser_id)
     {
         $data = $request->validated();
+        $data['sum']= $data['amount']*$data['buy_price'];
         $cryptoUsers = CryptoUser::all();
 
         //dd($cryptoUser_id);

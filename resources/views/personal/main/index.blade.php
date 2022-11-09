@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Головна</h1>
+                        <h1 class="m-0">Довідник криптовалют</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -54,7 +54,7 @@
                         <div class="small-box bg-{{auth()->user()->crypto_inf->sum('diff_sum') >= 0 ? "green" : "red"}}">
                             <div class="inner">
                                 <h3>{{round(auth()->user()->crypto_inf->sum('diff_sum'), 2)}} $</h3>
-                                <p>Прибуток</p>
+                                <p>{{auth()->user()->crypto_inf->sum('diff_sum') >= 0 ? "Прибуток" : "Втрати"}}</p>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-chart-line"></i>

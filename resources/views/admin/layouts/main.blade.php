@@ -43,6 +43,12 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item pr-4">
+                    <form action="{{ route('main.index') }}">
+                        <input type="submit" value="Головна" class="btn btn-outline-dark">
+                    </form>
+                </li>
+
+                <li class="nav-item pr-4">
                     <form action="{{ route('personal.main.index') }}" >
                         <input type="submit" value="Особистий кабінет" class="btn btn-outline-dark">
                     </form>
@@ -63,7 +69,7 @@
     @yield('content')
 
     <footer class="main-footer">
-        <strong>Blog by Vasiliev 2022</strong>
+        <strong>Kursova 2022</strong>
     </footer>
 
     <!-- Control Sidebar -->

@@ -42,6 +42,11 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
+                <li class="nav-item pr-4">
+                    <form action="{{ route('main.index') }}">
+                        <input type="submit" value="Головна" class="btn btn-outline-dark">
+                    </form>
+                </li>
                 @if(auth()->user()->role==0)
                 <li class="nav-item pr-4">
                     <form action="{{ route('admin.main.index') }}" >
@@ -65,7 +70,7 @@
     @yield('content')
 
     <footer class="main-footer">
-        <strong>Blog by Vasiliev 2022</strong>
+        <strong>Kursova 2022</strong>
     </footer>
 
     <!-- Control Sidebar -->
