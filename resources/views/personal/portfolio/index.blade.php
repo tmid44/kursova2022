@@ -51,7 +51,7 @@
                                             <td><a href="{{route('personal.portfolio.edit', $cryptoUser->id)}}"
                                                    class="text-success"><i class="fas fa-pen"></i> </a></td>
                                             <td>
-                                                <form action="{{route('admin.crypto.delete', $cryptoUser->id)}}"
+                                                <form action="{{route('personal.portfolio.delete', $cryptoUser->id)}}"
                                                       method="POST">
                                                     @csrf
                                                     @method('DELETE')
