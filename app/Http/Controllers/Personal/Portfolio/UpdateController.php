@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Personal\Portfolio;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\Crypto\UpdateRequest;
+use App\Http\Requests\Personal\Portfolio\UpdateRequest;
 use App\Models\Category;
 use App\Models\Crypto;
 use App\Models\CryptoUser;
@@ -12,15 +12,19 @@ use Illuminate\Support\Facades\Storage;
 
 class UpdateController extends Controller
 {
-    public function __invoke(UpdateRequest $request, CryptoUser $cryptoUser)
+    public function __invoke(UpdateRequest $request, int $cryptoUser_id)
     {
-
         $data = $request->validated();
-        dd($data);
-        if (isset($data['logo'])) {
-            $data['logo'] = Storage::disk('public')->put('/images', $data['logo']);
-        }
+        $cryptoUsers = CryptoUser::all();
+
+        //dd($cryptoUser_id);
+        foreach ($cryptoUsers as $cryptoUserr)
+            if ($cryptoUserr->id == $cryptoUser_id){
+                $cryptoUser = $cryptoUserr;
+            }
+        //dd($cryptoUser);
+
         $cryptoUser->update($data);
-        return view('admin.cryptos.show', compact('crypto'));
+        return redirect()->route('personal.portfolio.index');
     }
 }

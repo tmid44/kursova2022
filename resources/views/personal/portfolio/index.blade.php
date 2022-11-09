@@ -40,18 +40,18 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($crypto_infs as $crypto)
+                                    @foreach($crypto_infs as $cryptoUser)
                                         <tr>
-                                            <td>{{$crypto->id}}</td>
-                                            <td>{{$crypto->crypto->title}}</td>
-                                            <td>{{$crypto->crypto->tag}}</td>
-                                            <td>{{$crypto->amount}}</td>
-                                            <td>{{$crypto->buy_price}}</td>
-                                            <td>{{$crypto->crypto->current_price}}</td>
-                                            <td><a href="{{route('personal.portfolio.edit', $crypto->id)}}"
+                                            <td>{{$cryptoUser->id}}</td>
+                                            <td>{{$cryptoUser->crypto->title}}</td>
+                                            <td>{{$cryptoUser->crypto->tag}}</td>
+                                            <td>{{$cryptoUser->amount}}</td>
+                                            <td>{{$cryptoUser->buy_price}}</td>
+                                            <td>{{$cryptoUser->crypto->current_price}}</td>
+                                            <td><a href="{{route('personal.portfolio.edit', $cryptoUser->id)}}"
                                                    class="text-success"><i class="fas fa-pen"></i> </a></td>
                                             <td>
-                                                <form action="{{route('admin.crypto.delete', $crypto->id)}}"
+                                                <form action="{{route('admin.crypto.delete', $cryptoUser->id)}}"
                                                       method="POST">
                                                     @csrf
                                                     @method('DELETE')

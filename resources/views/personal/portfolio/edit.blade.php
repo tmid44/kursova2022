@@ -39,16 +39,18 @@
                                 </div>
 
                                 <input type="text" name="amount" class="form-control" placeholder="Введіть кількість криптовалюти"
-                                       value="{{old('amount')}}">
+                                       value="{{$cryptoUser->amount}}">
                                 @error('amount')
                                 <div class="text-danger">{{$message}}</div>
                                 @enderror
 
                                 <input type="text" name="buy_price" class="form-control" placeholder="Введіть ціну покупки"
-                                       value="{{old('buy_price')}}">
+                                       value="{{$cryptoUser->buy_price}}">
                                 @error('buy_price')
                                 <div class="text-danger">{{$message}}</div>
                                 @enderror
+                                <input type="submit" class="btn btn-primary" value="Редагувати">
+
                             </div>
                         </form>
                     </div>
