@@ -99,6 +99,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Personal', 'prefix' => 'perso
         Route::get('/{portfolio}/edit', 'EditController')->name('personal.portfolio.edit');
         Route::patch('/{portfolio}', 'UpdateController')->name('personal.portfolio.update');
         Route::delete('/{portfolio}', 'DeleteController')->name('personal.portfolio.delete');
+        Route::post('/{cryptoName}', 'SearchController')->name('personal.portfolio.search');
     });
 
     Route::group(['namespace' => 'Liked', 'prefix'=>'liked'], function () {

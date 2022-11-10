@@ -23,6 +23,18 @@
                         <a href="{{route('personal.portfolio.create')}}" class="btn btn-block btn-primary">Доповнити портфоліо</a>
                     </div>
                 </div>
+                {{--<form action="{{route('personal.portfolio.search' )}}" method="post">
+                    @csrf
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <input type="text" name="cryptoName" class="form-control" />
+                            <label class="form-label">Пошук за назвою</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>--}}
                 <div class="row">
                     <div class="col-11">
                         <div class="card">
